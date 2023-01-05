@@ -1,0 +1,185 @@
+.button {
+  width: 3rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: transparent;
+  border: none;
+  z-index: 4;
+  cursor: pointer;
+}
+.icon,
+.icon::after,
+.icon::before {
+  width: 3rem;
+  height: 0.5rem;
+  background-color: #4a9104;
+  position: absolute;
+}
+.icon::after {
+  content: "";
+  top: -0.9rem;
+  right: 0rem;
+}
+.icon::before {
+  content: "";
+  top: 0.9rem;
+  right: 0rem;
+}
+.logo {
+  display: none;
+}
+.links {
+  width: 70vw;
+  height: 100vh;
+  background-color: #ffff9e;
+  position: fixed;
+  right: -70vw;
+  transition: 1s all;
+  z-index: 10;
+}
+.show {
+  right: 0;
+}
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(83, 83, 83, 0.3);
+  z-index: 1;
+}
+.links div:first-child {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  fill: #4a9104;
+  cursor: pointer;
+}
+.links ul {
+  margin: 7rem 0;
+}
+.links ul li:not(:first-child) {
+  margin-top: 3rem;
+  padding-inline: 1.5rem;
+}
+.links ul li a {
+  color: #4a9104;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.links ul li a:hover {
+  color: #455e14;
+}
+.links div:last-child {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+}
+.links button {
+  background-color: transparent;
+  border: none;
+  color: #4a9104;
+  font-weight: 800;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-bottom: 4px solid transparent;
+}
+.form {
+  position: relative;
+}
+.form input {
+  padding: 13px 40px 13px 20px;
+  border-radius: 8px;
+  border: 1px solid #f7f7f7;
+  background: #f7f7f7;
+  color: #7f7f7f;
+  line-height: 1.15;
+  font-size: 1.5rem;
+  width: 67vw;
+  margin-inline: 1.5vw;
+}
+.form input:focus {
+  outline: none;
+}
+.form button {
+  fill: #7f7f7f;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  cursor: pointer;
+}
+@media (min-width: 1000px) {
+  .nav{
+    background-color: orange;
+    width:100vw;
+    height: 95px;
+  }
+  .icon {
+    display: none;
+  }
+  .logo {
+    display: block;
+  }
+  .logo h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+  }
+  .links {
+    background-color: orange;
+    right: 50%;
+    transform: translate(50%, 0);
+    top: 0;
+    margin: 0 auto;
+    width: 100rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+  }
+  .links ul {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem 0;
+  }
+  .links ul li:not(:first-child) {
+    margin-top: 0;
+    padding-inline: 0rem;
+  }
+  .links div:first-child {
+    display: none;
+  }
+  .links button {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .links div:last-child {
+    gap: 2rem;
+  }
+  .links ul li a {
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+  .links ul li:first-child {
+    width: 52rem;
+    height: 4.5rem;
+  }
+  .form input {
+    padding: 15px 40px 15px 20px;
+    width: 52rem;
+    margin-inline: 0;
+  }
+  .form button {
+    right: 1rem;
+    top: 1.4rem;
+  }
+}

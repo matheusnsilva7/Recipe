@@ -1,0 +1,107 @@
+.container {
+  padding: 1rem 2rem 3rem 2rem;
+}
+.container h3 {
+  font-size: 2.5rem;
+  color: #7f7f7f;
+  font-weight: 300;
+}
+.recipeContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 28rem);
+  padding: 2rem 0;
+  gap: 2.5rem;
+  column-gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.recipe {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #7f7f7f;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  padding: 0 0 1.5rem 0;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  width: 28rem;
+  height: 23rem;
+  margin: 0 auto;
+}
+.recipe img {
+  grid-column: span 2;
+  width: 28rem;
+  border-radius: 8px 8px 0 0;
+  margin: 0 auto;
+  height: 15rem;
+}
+.recipe h4 {
+  grid-column: span 2;
+  text-align: center;
+  padding: 1rem 1rem 0 1rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.recipe h5 {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+.error {
+  padding-top: 5rem;
+  color: #7f7f7f;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  grid-column: span 3;
+}
+.page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+}
+.page div {
+  padding-top: 0.5rem;
+  color: #7f7f7f;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.next {
+  grid-area: 1/2;
+  justify-self: right;
+}
+.page div:hover {
+  text-decoration: underline;
+}
+@media (min-width: 700px) {
+  .container {
+    padding: 1rem 3rem 3rem 3rem;
+  }
+  .page {
+    width: 59rem;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    width: 100rem;
+    margin: 0 auto;
+    /*overflow: hidden; */
+    padding: 1rem 3rem 1rem 3rem;
+  }
+  .recipeContainer {
+    padding: 1.5rem 0;
+    height: 50rem;
+    grid-template-rows: repeat(2,22.5rem);
+  }
+  .recipe {
+    padding: 0;
+    height: 22.5rem;
+  }
+  .recipe h4 {
+    padding: 0;
+  }
+  .page {
+    width: 90rem;
+    position: relative;
+    bottom: 0rem;
+  }
+}
