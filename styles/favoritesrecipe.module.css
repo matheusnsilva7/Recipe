@@ -1,11 +1,3 @@
-.container {
-  padding: 1rem 2rem 3rem 2rem;
-}
-.container h3 {
-  font-size: 2.5rem;
-  color: #7f7f7f;
-  font-weight: 300;
-}
 .recipeContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, 28rem);
@@ -51,13 +43,6 @@
   font-size: 1.3rem;
   font-weight: 300;
 }
-.error {
-  padding-top: 5rem;
-  color: #7f7f7f;
-  margin: 0 auto;
-  font-size: 1.5rem;
-  grid-column: span 3;
-}
 .page {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -69,12 +54,12 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
-.next {
-  grid-area: 1/2;
-  justify-self: right;
-}
-.page div:hover {
-  text-decoration: underline;
+.error {
+  padding-top: 5rem;
+  color: #7f7f7f;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  grid-column: span 3;
 }
 @media (min-width: 700px) {
   .container {
@@ -93,6 +78,7 @@
   }
   .recipeContainer {
     padding: 1.5rem 0;
+    width: 100rem;
     height: 50rem;
     grid-template-rows: repeat(2, 22.5rem);
   }

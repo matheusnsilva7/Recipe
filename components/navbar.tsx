@@ -13,8 +13,12 @@ const navBar = () => {
   useEffect(() => {
     if (router.asPath !== "/") setSearch(true);
     else setSearch(false);
-
-    if (router.asPath !== "/recipes/[recipeId]" && router.asPath !== "/")
+    if (
+      router.asPath !== "/recipes/[recipeId]" &&
+      router.asPath !== "/" &&
+      router.asPath.split("/")[1] !== "recipe" &&
+      router.asPath !== "/favoritesrecipe"
+    )
       setInput(router.asPath.split("/")[2].replaceAll("%20", " "));
   }, [router.asPath]);
 
@@ -80,7 +84,7 @@ const navBar = () => {
             )}
           </li>
           <li>
-            <Link href="/">Favorites recipe</Link>
+            <Link href="/favoritesrecipe">Favorites recipe</Link>
           </li>
           <li>
             <Link href="/">My recipe</Link>

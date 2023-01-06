@@ -114,9 +114,9 @@
   cursor: pointer;
 }
 @media (min-width: 1000px) {
-  .nav{
+  .nav {
     background-color: orange;
-    width:100vw;
+    width: 100vw;
     height: 95px;
   }
   .icon {

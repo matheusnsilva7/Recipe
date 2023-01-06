@@ -1,10 +1,22 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
 import LoadingIndicator from "../../components/LoadingIndicator";
 
 import classes from "../../styles/recipes.module.css";
 
-const recipe = () => {
+interface ObjRecipe {
+  cooking_time?: number;
+  id?: string;
+  image_url?: string;
+  ingredients?: { quantity?: number; unit?: string; description?: string }[];
+  publisher?: string;
+  servings?: number;
+  source_url?: string;
+  title?: string;
+}
+
+const recipes = () => {
   const [recipes, setRecipes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -12,8 +24,8 @@ const recipe = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.query.recipeId !== undefined) {
-      fetchRecipesHandler(router.query.recipeId);
+    if (router.query.search !== undefined) {
+      fetchRecipesHandler(router.query.search);
     }
     if (error) setError(false);
     if (recipes.length !== 0) setRecipes([]);
@@ -49,11 +61,21 @@ const recipe = () => {
         {!error ? (
           recipes.slice((page - 1) * 6, page * 6).map((elem: any) => {
             return (
-              <div className={classes.recipe} key={elem.id}>
+              <Link
+                href={`/recipe/${elem.id}`}
+                className={
+                  classes.recipe +
+                  " " +
+                  (JSON.parse(localStorage.getItem("favorite") || "[]")?.some(
+                    (a: ObjRecipe) => a.id === elem.id
+                  ) && classes.favorite)
+                }
+                key={elem.id}
+              >
                 <img src={elem["image_url"]} />
                 <h4>{elem.title}</h4>
                 <h5>{elem.publisher}</h5>
-              </div>
+              </Link>
             );
           })
         ) : (
@@ -83,4 +105,4 @@ const recipe = () => {
   );
 };
 
-export default recipe;
+export default recipes;

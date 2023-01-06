@@ -1,0 +1,123 @@
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 35vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.title h3 {
+  font-size: 4rem;
+  color: white;
+}
+.img {
+  width: 100vw;
+  height: 35vh;
+}
+.containerInformation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  font-size: 1.5rem;
+  color: orange;
+  align-items: center;
+  padding: 1rem 0;
+}
+.containerInformation h4 span {
+  color: #7f7f7f;
+  font-size: 1.3rem;
+  padding-left: 0.5rem;
+}
+.container {
+  text-align: center;
+  color: #7f7f7f;
+  padding: 0.5rem 0;
+}
+.container h3 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  color: orange;
+}
+.container div div {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+}
+.container p {
+  width: 30rem;
+  font-size: 1.3rem;
+  margin: 0 auto;
+}
+.container a,
+.container button {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1.25rem 2.25rem;
+  text-decoration: none;
+  background: orange;
+  border-radius: 10rem;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  width: 12rem;
+  margin: 8px auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.gridArea div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.container button {
+  font-size: 1rem;
+}
+.container .remove {
+  background: rgb(255, 67, 67);
+}
+.error {
+  text-align: center;
+  font-size: 3rem;
+  color: #7f7f7f;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+@media (min-width: 1000px) {
+  .mainContainer {
+    margin: 0 auto;
+    background-color: #f7f7f742;
+  }
+  .containerInfo {
+    display: grid;
+    width: 100rem;
+    height: 85.5vh;
+    padding: 5rem 0;
+    margin: 0 auto;
+    grid-template-rows: 5rem 34rem;
+    grid-template-columns: 50rem 50rem;
+    position: relative;
+  }
+  .title {
+    top: 5rem;
+    width: 50rem;
+    height: 27rem;
+  }
+  .img {
+    width: 50rem;
+    height: 27rem;
+  }
+  .container div div {
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+    width: 40rem;
+    margin: 0 auto;
+  }
+  .gridArea {
+    grid-area: 2/1;
+    padding-top: 27rem;
+  }
+}
