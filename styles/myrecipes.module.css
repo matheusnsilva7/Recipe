@@ -1,0 +1,19 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.container h3{
+    font-size: 2.3rem;
+    padding: 1.5rem 0 0 2rem;
+}
+.container button{
+    border: none;
+    background-color: orange;
+    margin: 0.5rem 5rem 0 0;
+    color: white;
+    padding: 1rem 0;
+    border-radius: 8px;
+}
+.container div {
+    grid-column: span 2;
+}

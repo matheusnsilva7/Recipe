@@ -17,7 +17,7 @@ const navBar = () => {
       router.asPath !== "/recipes/[recipeId]" &&
       router.asPath !== "/" &&
       router.asPath.split("/")[1] !== "recipe" &&
-      router.asPath !== "/favoritesrecipe"
+      router.asPath !== "/myrecipes"
     )
       setInput(router.asPath.split("/")[2].replaceAll("%20", " "));
   }, [router.asPath]);
@@ -57,7 +57,7 @@ const navBar = () => {
         </div>
         <div className={Classes.logo}>
           <Link href="/">
-            <h1>recipe</h1>
+            <h1>recipes</h1>
           </Link>
         </div>
         <ul>
@@ -84,10 +84,7 @@ const navBar = () => {
             )}
           </li>
           <li>
-            <Link href="/favoritesrecipe">Favorites recipe</Link>
-          </li>
-          <li>
-            <Link href="/">My recipe</Link>
+            <Link href="/myrecipes">My recipes</Link>
           </li>
         </ul>
       </div>

@@ -146,7 +146,7 @@
   }
   .links ul {
     display: flex;
-    gap: 3rem;
+    gap: 13rem;
     justify-content: center;
     align-items: center;
     margin: 2.5rem 0;
