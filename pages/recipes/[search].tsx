@@ -76,7 +76,14 @@ const Recipes = () => {
                 }
                 key={elem.id}
               >
-                <img src={elem["image_url"]} alt={elem.title} />
+                <img
+                  src={
+                    elem["image_url"]?.slice(0, 5) !== "https"
+                      ? elem["image_url"]?.replace("http", "https")
+                      : elem["image_url"]
+                  }
+                  alt={elem.title}
+                />
                 <h4>{elem.title}</h4>
                 <h5>{elem.publisher}</h5>
               </Link>

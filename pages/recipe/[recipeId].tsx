@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useCallback, useState, useEffect } from "react";
 import LoadingIndicator from "../../components/LoadingIndicator";
-import Head from 'next/head';
+import Head from "next/head";
 
 import classes from "../../styles/recipe.module.css";
 
@@ -29,7 +29,8 @@ const Recipe = () => {
     if (error) setError(false);
     if (Object.keys(Recipe).length !== 0) setRecipes({});
     if (!isLoading) setIsLoading(true);
-    localStorage.getItem("favorite") && setFavorite(JSON.parse(localStorage.getItem("favorite") || "[]"));
+    localStorage.getItem("favorite") &&
+      setFavorite(JSON.parse(localStorage.getItem("favorite") || "[]"));
   }, [router.asPath]);
 
   const fetchRecipesHandler = useCallback(
@@ -68,6 +69,7 @@ const Recipe = () => {
       JSON.stringify(favorite.filter((a) => a.id !== recipes.id))
     );
   };
+
   return (
     <div className={classes.mainContainer}>
       <Head>
@@ -76,7 +78,15 @@ const Recipe = () => {
       {isLoading && <LoadingIndicator />}
       {!isLoading && !error && (
         <div className={classes.containerInfo} id={recipes.id}>
-          <img src={recipes["image_url"]} className={classes.img} alt={recipes.title} />
+          <img
+            src={
+              recipes["image_url"]?.slice(0, 5) !== "https"
+                ? recipes["image_url"]?.replace("http", "https")
+                : recipes["image_url"]
+            }
+            className={classes.img}
+            alt={recipes.title}
+          />
           <div className={classes.title}>
             <h3>{recipes.title}</h3>
           </div>
