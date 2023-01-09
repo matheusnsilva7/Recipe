@@ -17,7 +17,7 @@ interface ObjRecipe {
   title?: string;
 }
 
-const recipes = () => {
+const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -76,7 +76,7 @@ const recipes = () => {
                 }
                 key={elem.id}
               >
-                <img src={elem["image_url"]} />
+                <img src={elem["image_url"]} alt={elem.title} />
                 <h4>{elem.title}</h4>
                 <h5>{elem.publisher}</h5>
               </Link>
@@ -109,4 +109,4 @@ const recipes = () => {
   );
 };
 
-export default recipes;
+export default Recipes;

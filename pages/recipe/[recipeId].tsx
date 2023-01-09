@@ -16,7 +16,7 @@ interface ObjRecipe {
   title?: string;
 }
 
-const recipe = () => {
+const Recipe = () => {
   const [recipes, setRecipes] = useState<ObjRecipe>({});
   const [favorite, setFavorite] = useState<ObjRecipe[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -27,7 +27,7 @@ const recipe = () => {
     if (router.query.recipeId !== undefined)
       fetchRecipesHandler(router.query.recipeId);
     if (error) setError(false);
-    if (Object.keys(recipe).length !== 0) setRecipes({});
+    if (Object.keys(Recipe).length !== 0) setRecipes({});
     if (!isLoading) setIsLoading(true);
     localStorage.getItem("favorite") && setFavorite(JSON.parse(localStorage.getItem("favorite") || "[]"));
   }, [router.asPath]);
@@ -76,7 +76,7 @@ const recipe = () => {
       {isLoading && <LoadingIndicator />}
       {!isLoading && !error && (
         <div className={classes.containerInfo} id={recipes.id}>
-          <img src={recipes["image_url"]} className={classes.img} />
+          <img src={recipes["image_url"]} className={classes.img} alt={recipes.title} />
           <div className={classes.title}>
             <h3>{recipes.title}</h3>
           </div>
@@ -132,4 +132,4 @@ const recipe = () => {
   );
 };
 
-export default recipe;
+export default Recipe;

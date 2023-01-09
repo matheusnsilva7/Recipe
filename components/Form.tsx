@@ -19,7 +19,7 @@ interface props {
   newRecipe: (recipe: any) => void;
 }
 
-const form = ({ recipes, newRecipe, form }: props) => {
+const Form = ({ recipes, newRecipe, form }: props) => {
   const formRef = useRef<HTMLFormElement>(null);
 
   const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
@@ -83,4 +83,4 @@ const form = ({ recipes, newRecipe, form }: props) => {
   );
 };
 
-export default form;
+export default Form;

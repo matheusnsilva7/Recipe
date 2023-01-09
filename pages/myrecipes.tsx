@@ -16,7 +16,7 @@ interface myRecipes {
   ingredients5: string;
 }
 
-const myrecipe = () => {
+const Myrecipe = () => {
   const [newRecipe, setNewRecipe] = useState<boolean>(false);
   const [recipes, setRecipes] = useState<myRecipes[]>([]);
 
@@ -103,4 +103,4 @@ const myrecipe = () => {
   );
 };
 
-export default myrecipe;
+export default Myrecipe;
