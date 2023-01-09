@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
+import Head from 'next/head'
 import classes from "../styles/Home.module.css";
 
 export default function Home() {
@@ -21,6 +22,9 @@ export default function Home() {
   };
   return (
     <div className={classes["home__container"]}>
+      <Head>
+        <title>Recipes - Home</title>
+      </Head>
       <div className={classes.firstContainer}>
         <h1>BEST RECIPES</h1>
         <form onSubmit={submit}>

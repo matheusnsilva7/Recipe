@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
 import LoadingIndicator from "../../components/LoadingIndicator";
+import Head from "next/head";
 
 import classes from "../../styles/recipes.module.css";
 
@@ -56,6 +57,9 @@ const recipes = () => {
 
   return (
     <div className={classes.container}>
+      <Head>
+        <title>Recipes - {router.query.search}</title>
+      </Head>
       <div className={classes.recipeContainer}>
         {isLoading && <LoadingIndicator />}
         {!error ? (

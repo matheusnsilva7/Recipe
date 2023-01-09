@@ -77,6 +77,8 @@
 }
 .container .remove {
   background: rgb(255, 67, 67);
+  height: 4.7rem;
+  width: 12rem;
 }
 .error {
   text-align: center;

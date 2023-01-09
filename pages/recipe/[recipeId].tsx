@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useCallback, useState, useEffect } from "react";
 import LoadingIndicator from "../../components/LoadingIndicator";
+import Head from 'next/head';
 
 import classes from "../../styles/recipe.module.css";
 
@@ -69,6 +70,9 @@ const recipe = () => {
   };
   return (
     <div className={classes.mainContainer}>
+      <Head>
+        <title>Recipes - {recipes.title}</title>
+      </Head>
       {isLoading && <LoadingIndicator />}
       {!isLoading && !error && (
         <div className={classes.containerInfo} id={recipes.id}>
@@ -116,7 +120,7 @@ const recipe = () => {
                   className={classes.remove}
                   onClick={RemovefavoriteHandler}
                 >
-                  Remove my favorites
+                  Remove from my favorite
                 </button>
               )}
             </div>
