@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import Classes from "./navbar.module.css";
 
-const NavBar = () => {
+const Navbar = () => {
   const router = useRouter();
   const [mobileNav, setMobileNav] = useState(false);
   const [search, setSearch] = useState(false);
@@ -92,4 +92,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
