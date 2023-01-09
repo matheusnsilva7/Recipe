@@ -13,6 +13,7 @@
   color: white;
   padding: 1rem 0;
   border-radius: 8px;
+  cursor: pointer;
 }
 .container div {
   grid-column: span 2;

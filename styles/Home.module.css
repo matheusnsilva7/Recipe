@@ -160,10 +160,10 @@
 }
 @media (min-width: 1000px) {
   .firstContainer {
-    height: 43vh;
+    height: 44vh;
   }
   .secondContainer {
-    height: 42vh;
+    height: 41vh;
   }
   .secondContainer h2 {
     font-size: 2.7rem;
