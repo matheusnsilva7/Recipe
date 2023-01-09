@@ -67,7 +67,11 @@ export default function Home() {
                     }
                     key={elem.id}
                   >
-                    <img src={elem["image_url"]} />
+                    <img src={
+                    elem["image_url"]?.slice(0, 5) !== "https"
+                      ? elem["image_url"]?.replace("http", "https")
+                      : elem["image_url"]} 
+                     />
                     <h4>{elem.title}</h4>
                     <h5>{elem.publisher}</h5>
                   </Link>
