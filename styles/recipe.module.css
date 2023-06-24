@@ -5,8 +5,8 @@
   display: grid;
   place-content: center;
   text-align: center;
-  width: 100vw;
-  height: 35vh;
+  width: 100%;
+  height: 22.6rem;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .title h3 {
@@ -14,8 +14,8 @@
   color: white;
 }
 .img {
-  width: 100vw;
-  height: 35vh;
+  width: 100%;
+  height: 22.6rem;
 }
 .containerInformation {
   display: grid;
@@ -57,7 +57,7 @@
   padding: 1.25rem 2.25rem;
   text-decoration: none;
   background: orange;
-  border-radius: 10rem;
+  border-radius: 5px;
   border: none;
   text-transform: uppercase;
   color: #fff;
@@ -80,6 +80,9 @@
   height: 4.7rem;
   width: 12rem;
 }
+.ingredientsContainer {
+  padding-bottom: 2rem;
+}
 .error {
   text-align: center;
   font-size: 3rem;
@@ -90,12 +93,12 @@
 }
 @media (min-width: 700px) {
   .img {
-    width: 70vw;
+    width: 67vw;
     margin: 0 15vw;
     height: 35vh;
   }
   .title {
-    width: 70vw;
+    width: 67vw;
     margin: 0 15vw;
     height: 35vh;
   }
@@ -109,7 +112,7 @@
     display: grid;
     width: 100rem;
     height: 85.5vh;
-    padding: 5rem 0;
+    padding: 10rem 0 1rem;
     margin: 0 auto;
     grid-template-rows: 5rem 34rem;
     grid-template-columns: 50rem 50rem;
@@ -118,7 +121,7 @@
   .title {
     top: 5rem;
     width: 50rem;
-    margin: 0;
+    margin: 5rem 0;
     height: 27rem;
   }
   .img {

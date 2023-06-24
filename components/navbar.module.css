@@ -14,7 +14,7 @@
 .icon::before {
   width: 3rem;
   height: 0.5rem;
-  background-color: #4a9104;
+  background-color: #788402;
   position: absolute;
 }
 .icon::after {
@@ -33,11 +33,12 @@
 .links {
   width: 70vw;
   height: 100vh;
-  background-color: #ffff9e;
+  background-color: #feaa00;
   position: fixed;
   right: -70vw;
   transition: 1s all;
   z-index: 10;
+  top: 0;
 }
 .show {
   right: 0;
@@ -55,7 +56,7 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  fill: #4a9104;
+  fill: #342628;
   cursor: pointer;
 }
 .links ul {
@@ -66,12 +67,9 @@
   padding-inline: 1.5rem;
 }
 .links ul li a {
-  color: #4a9104;
+  color: #342628;
   font-size: 1.3rem;
   font-weight: 600;
-}
-.links ul li a:hover {
-  color: #455e14;
 }
 .links div:last-child {
   display: flex;
@@ -88,36 +86,46 @@
   border-bottom: 4px solid transparent;
 }
 .form {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .form input {
-  padding: 13px 40px 13px 20px;
-  border-radius: 8px;
-  border: 1px solid #f7f7f7;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #e0e0e0;
   background: #f7f7f7;
   color: #7f7f7f;
-  line-height: 1.15;
+  line-height: 1.47;
   font-size: 1.5rem;
-  width: 67vw;
-  margin-inline: 1.5vw;
+  width: 51vw;
 }
 .form input:focus {
   outline: none;
 }
 .form button {
-  fill: #7f7f7f;
-  background-color: transparent;
+  fill: #f7f4ef;
+  background-color: #788402;
+  border-radius: 0 5px 5px 0;
+  padding: 8.5px 1.5rem 6.5px;
   border: none;
-  position: absolute;
-  right: 1.5rem;
-  top: 1rem;
   cursor: pointer;
+}
+@media (min-width: 700px) {
+  .links {
+    width: 35rem;
+  }
+  .form {
+    width: 32rem;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 1000px) {
   .nav {
-    background-color: orange;
-    width: 100vw;
+    width: 98vw;
     height: 95px;
+    position: absolute;
+    top: 0;
   }
   .icon {
     display: none;
@@ -129,11 +137,11 @@
     font-weight: 700;
     font-size: 3rem;
     text-align: center;
-    color: black;
+    color: #feaa00;
   }
   .links {
-    background-color: orange;
-    right: 50%;
+    background-color: transparent;
+    right: 49%;
     transform: translate(50%, 0);
     top: 0;
     margin: 0 auto;
@@ -173,13 +181,17 @@
     width: 52rem;
     height: 4.5rem;
   }
+  .form {
+    width: 57rem;
+  }
   .form input {
-    padding: 15px 40px 15px 20px;
-    width: 52rem;
-    margin-inline: 0;
+    line-height: 1.4667;
   }
   .form button {
-    right: 1rem;
-    top: 1.4rem;
+    padding: 9px 1.5rem 5px;
+    line-height: 1.4667;
+  }
+  .links ul li .grey{
+    color:#7f7f7f
   }
 }

@@ -57,7 +57,7 @@ const Navbar = () => {
         </div>
         <div className={Classes.logo}>
           <Link href="/">
-            <h1>recipes</h1>
+            <h1>Recipes</h1>
           </Link>
         </div>
         <ul>
@@ -84,7 +84,19 @@ const Navbar = () => {
             )}
           </li>
           <li>
-            <Link href="/myrecipes">My recipes</Link>
+            <Link
+              className={router.asPath !== "/" ? Classes.grey : " "}
+              onClick={(e) => {
+                if (router.asPath === "/") {
+                  e.preventDefault();
+                  window.scrollTo(0, 600);
+                }
+                setMobileNav(false);
+              }}
+              href="/"
+            >
+              My Favorites
+            </Link>
           </li>
         </ul>
       </div>

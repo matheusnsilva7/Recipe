@@ -58,8 +58,11 @@ const Recipes = () => {
   return (
     <div className={classes.container}>
       <Head>
-        <title>Recipes - {router.query.search}</title>
+        <title>{`Recipes - ${
+          router.query.search ? router.query.search : " "
+        }`}</title>
       </Head>
+      <h3>{router.query.search}</h3>
       <div className={classes.recipeContainer}>
         {isLoading && <LoadingIndicator />}
         {!error ? (
@@ -97,14 +100,23 @@ const Recipes = () => {
         {!isLoading && (
           <>
             {page > 1 && (
-              <div onClick={() => setPage((prev) => (prev -= 1))}>
+              <div
+                className={classes.previous}
+                onClick={() => {
+                  setPage((prev) => (prev -= 1));
+                  window.scrollTo(0, 0);
+                }}
+              >
                 previous page
               </div>
             )}
             {Math.floor(recipes.length / 6) >= page && (
               <div
                 className={classes.next}
-                onClick={() => setPage((prev) => (prev += 1))}
+                onClick={() => {
+                  setPage((prev) => (prev += 1));
+                  window.scrollTo(0, 0);
+                }}
               >
                 Next Page
               </div>

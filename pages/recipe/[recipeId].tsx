@@ -73,7 +73,7 @@ const Recipe = () => {
   return (
     <div className={classes.mainContainer}>
       <Head>
-        <title>Recipes - {recipes.title}</title>
+        <title>{`Recipes - ${recipes.title ? recipes.title : " "}`}</title>
       </Head>
       {isLoading && <LoadingIndicator />}
       {!isLoading && !error && (
@@ -102,7 +102,7 @@ const Recipe = () => {
           </div>
           <div className={classes.container}>
             <h3>Ingredients</h3>
-            <div>
+            <div className={classes.ingredientsContainer}>
               {recipes.ingredients?.map((elem, i) => {
                 return (
                   <div key={i}>

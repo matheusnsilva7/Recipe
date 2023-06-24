@@ -1,97 +1,136 @@
 .home__container {
-  overflow: hidden;
+  max-width: 100vw;
 }
 .firstContainer {
-  background: rgb(255, 166, 0);
-  height: 58vh;
-  width: 100vw;
-  padding-top: 5rem;
+  max-width: 100vw;
+  background-image: url("../img/pexels-nataliya-vaitkevich-5794777.jpg");
+  background-size: cover;
+}
+.firstContainer div {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 50rem;
+  margin: 0 auto;
   display: grid;
-  gap: 2.5rem;
+  gap: 3.5rem;
   place-content: center;
 }
 .firstContainer h1 {
   text-align: center;
-  font-weight: 600;
-  font-size: 2rem;
-  height: 5rem;
+  font-weight: bold;
+  font-size: 4rem;
   line-height: 40px;
-  letter-spacing: 0.5em;
   color: #fff;
+  font-family: "Amatic SC", cursive;
 }
 .firstContainer form {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .firstContainer input {
-  width: 30rem;
-  padding: 15px 40px 15px 20px;
-  border-radius: 8px;
-  border: 1px solid #f7f7f7;
-  background: #f7f7f7;
-  color: #7f7f7f;
-  line-height: 1.15;
+  width: 25rem;
+  padding: 12px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  background: #f7f7f74b;
+  color: #f7f4ef;
+  line-height: 1.667;
   font-size: 1.2rem;
+}
+.firstContainer input::placeholder {
+  color: #f7f4efb9;
 }
 .firstContainer input:focus {
   outline: none;
 }
 .firstContainer button {
-  fill: #7f7f7f;
-  background-color: transparent;
+  fill: #f7f4ef;
+  background-color: #788402;
   border: none;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
+  border-radius: 0 5px 5px 0;
+  padding: 10px 1.5rem 7px;
   cursor: pointer;
 }
-.firstContainer h3 {
-  color: #7f7f7f;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  padding-left: 5px;
+.recipesFoods {
+  background-color: #fbfbfb;
+  border: 1px #e0e0e0 solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 32rem;
+  margin: 0 auto;
+  position: relative;
+
+  top: -6rem;
+  border-radius: 2px;
 }
-.link {
-  list-style: none;
-  color: white;
+.recipesFoods a {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2.5rem;
+  gap: 1rem;
+}
+.recipesFoods a img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+.recipesFoods span {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  color: black;
+}
+.pizza {
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+.burger {
+  border-bottom: 1px solid #e0e0e0;
+}
+.salad {
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+.lemonade {
+  border-bottom: 1px solid #e0e0e0;
+}
+.taco {
+  border-right: 1px solid #e0e0e0;
 }
 .secondContainer {
-  height: 42vh;
+  background-color: #fbfbfb;
+  border: 1px #e0e0e0 solid;
+  min-height: 10rem;
+  width: 33rem;
+  padding: 1rem;
+  margin: 0 auto 2rem;
 }
 .secondContainer h2 {
   font-size: 2rem;
   font-weight: 400;
-  padding: 1.5rem 3rem;
+  text-align: center;
 }
 .containerfavorites {
-  display: flex;
-  gap: 2rem;
-  padding: 0 3rem;
-  overflow: auto;
-  scroll-behavior: smooth;
-  margin: 0 3.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 2rem;
+  gap: 1rem;
+  row-gap: 2rem;
+  justify-content: center;
 }
-.containerfavorites::-webkit-scrollbar{
+.containerfavorites::-webkit-scrollbar {
   appearance: none;
 }
 .recipe {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  color: #7f7f7f;
-  border-radius: 8px;
-  background-color: #f7f7f7;
-  padding: 0 0 1.5rem 0;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-  width: 26rem;
-  height: 20rem;
-}
-.favorite {
-  background-color: #ffe659;
-  color: #91908e;
+  color: #FEAA00;
+  width: 15rem;
 }
 .recipe img {
   grid-column: span 2;
-  width: 26rem;
-  border-radius: 8px 8px 0 0;
+  width: 13rem;
+  border-radius: 2px;
   margin: 0 auto;
   height: 13rem;
 }
@@ -119,66 +158,103 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
-.arrowleft,
-.arrowright {
-  position: fixed;
-  fill: #7f7f7f;
-  height: 20rem;
-  display: grid;
-  place-content: center;
-  padding: 0 0 0 1rem;
-  cursor: pointer;
-}
-.arrowleft {
-  background: linear-gradient(0.25turn, #ffffff 55%, transparent);
-  left: 0;
-}
-.arrowright {
-  background: linear-gradient(-0.25turn, #ffffff 55%, transparent);
-  right: 0;
-}
 .error {
-  padding-top: 9rem;
+  padding: 2rem;
   color: #7f7f7f;
   margin: 0 auto;
   font-size: 1.5rem;
   grid-column: span 3;
 }
 @media (min-width: 700px) {
-  .firstContainer {
-    padding-top: 4rem;
-  }
   .firstContainer h1 {
     font-size: 4rem;
   }
   .firstContainer input {
-    width: 52rem;
+    width: 40rem;
+  }
+  .recipesFoods {
+    grid-template-columns: repeat(3, 1fr);
+    width: 60rem;
+  }
+  .pizza {
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+  }
+  .burger {
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+  }
+  .salad {
+    border-bottom: 1px solid #e0e0e0;
+    border-right: none;
+  }
+  .lemonade {
+    border-right: 1px solid #e0e0e0;
+    border-bottom: none;
+  }
+  .taco {
+    border-right: 1px solid #e0e0e0;
+  }
+  .secondContainer {
+    width: 60rem;
+    padding: 2rem;
   }
   .secondContainer h2 {
     font-size: 2rem;
   }
+  .containerfavorites {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .recipe {
+    margin: 0 auto;
+  }
+  .recipe img {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 @media (min-width: 1000px) {
   .firstContainer {
-    height: 44vh;
+    height: 50rem;
+  }
+  .recipesFoods {
+    grid-template-columns: repeat(6, 1fr);
+    width: 100rem;
+  }
+  .pizza {
+    border-bottom: none;
+    border-right: 1px solid #e0e0e0;
+  }
+  .burger {
+    border-bottom: none;
+    border-right: 1px solid #e0e0e0;
+  }
+  .salad {
+    border-bottom: none;
+    border-right: 1px solid #e0e0e0;
+  }
+  .lemonade {
+    border-right: 1px solid #e0e0e0;
+    border-bottom: none;
+  }
+  .taco {
+    border-right: 1px solid #e0e0e0;
+  }
+  .containerfavorites {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
   }
   .secondContainer {
-    height: 41vh;
+    width: 100rem;
+    padding: 3rem;
   }
   .secondContainer h2 {
     font-size: 2.7rem;
-    width: 102rem;
     margin: 0 auto;
     padding: 1.5rem 0;
   }
-  .containerfavorites {
-    position:relative;
-  }
-  .recipe {
-    padding: 0;
-    height: 20rem;
-  }
-  .recipe h4 {
-    padding: 0;
+  .error {
+    grid-column: span 5;
   }
 }
