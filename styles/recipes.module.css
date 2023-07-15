@@ -25,6 +25,9 @@
   width: 20rem;
   margin: 0 auto;
 }
+.recipe{
+  height: 20rem;
+}
 .favorite {
   color: #feaa00;
 }
@@ -44,7 +47,7 @@
   -webkit-line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  height: 4rem;
+  height: 5rem;
 }
 .recipe h5 {
   text-align: center;
@@ -96,6 +99,7 @@
     width: 100rem;
     margin: 9rem auto 2rem;
     padding: 2rem;
+    height: 52rem;
   }
   .container h3 {
     display: none;
@@ -109,6 +113,7 @@
   }
   .recipe h4 {
     padding: 0;
+    height: 4rem;
   }
   .page {
     width: 90rem;
