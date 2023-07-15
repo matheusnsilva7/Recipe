@@ -59,9 +59,8 @@
   width: 32rem;
   margin: 0 auto;
   position: relative;
-
   top: -6rem;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 .recipesFoods a {
   display: grid;
@@ -106,6 +105,7 @@
   width: 33rem;
   padding: 1rem;
   margin: 0 auto 2rem;
+  border-radius: 5px;
 }
 .secondContainer h2 {
   font-size: 2rem;
