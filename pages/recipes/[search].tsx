@@ -31,6 +31,7 @@ const Recipes = () => {
     if (error) setError(false);
     if (recipes.length !== 0) setRecipes([]);
     if (!isLoading) setIsLoading(true);
+    setPage(1)
   }, [router.asPath]);
 
   const fetchRecipesHandler = useCallback(
