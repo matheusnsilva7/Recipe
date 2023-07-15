@@ -33,6 +33,7 @@
   margin: 0 auto;
   height: 15rem;
   border-radius: 5px;
+  object-fit: cover;
 }
 .recipe h4 {
   text-align: center;
