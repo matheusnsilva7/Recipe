@@ -31,7 +31,7 @@
 .recipe img {
   width: 20rem;
   margin: 0 auto;
-  height: 15rem;
+  height: 14rem;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -40,6 +40,11 @@
   padding: 1rem 1rem 0 1rem;
   font-size: 1.7rem;
   font-weight: 500;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  height: 4rem;
 }
 .recipe h5 {
   text-align: center;
