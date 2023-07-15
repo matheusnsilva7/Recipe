@@ -102,6 +102,7 @@
     width: 67vw;
     margin: 0 15vw;
     height: 35vh;
+    border-radius: 5px;
   }
 }
 @media (min-width: 1000px) {
