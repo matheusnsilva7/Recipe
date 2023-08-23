@@ -25,7 +25,7 @@ The Favorite Recipes App is a convenient way to keep track of your preferred rec
 
 ## Demo
 
-Check out the live demo of the Favorite Recipes App: [https://favorite-recipes-app.netlify.app](https://favorite-recipes-app.netlify.app)
+Check out the live demo of the Favorite Recipes App: [https://recipes-matheusnsilva7.netlify.app/](https://recipes-matheusnsilva7.netlify.app/)
 
 ## Installation
 
