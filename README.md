@@ -1,6 +1,6 @@
-# Favorite Recipes App
+# Recipes Website
 
-Discover, save, and explore your favorite recipes with the Favorite Recipes App. This Next.js application lets you search for recipes, mark them as favorites, and view the details of each recipe.
+Discover, save, and explore your favorite recipes with the Favorite Recipes Website. This Next.js application lets you search for recipes, mark them as favorites, and view the details of each recipe.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ Discover, save, and explore your favorite recipes with the Favorite Recipes App.
 
 ## Introduction
 
-The Favorite Recipes App is a convenient way to keep track of your preferred recipes. It allows you to search for recipes, save your favorites, and view detailed information about each recipe.
+The Favorite Recipes Website is a convenient way to keep track of your preferred recipes. It allows you to search for recipes, save your favorites, and view detailed information about each recipe.
 
 ## Features
 
@@ -29,8 +29,8 @@ Check out the live demo of the Favorite Recipes App: [https://recipes-matheusnsi
 
 ## Installation
 
-1. Clone this repository: `git clone https://github.com/your-username/favorite-recipes-app.git`
-2. Navigate to the project directory: `cd favorite-recipes-app`
+1. Clone this repository: `git clone `
+2. Navigate to the project directory: `cd recipe`
 3. Install dependencies: `npm install`
 
 ## Usage
@@ -54,7 +54,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For questions or collaboration opportunities, reach out to:
-
-- Email: your@email.com
-- GitHub: [YourUsername](https://github.com/your-username)
+For questions or collaboration opportunities, reach out to me.
