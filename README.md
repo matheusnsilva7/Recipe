@@ -9,7 +9,6 @@ Discover, save, and explore your favorite recipes with the Favorite Recipes Webs
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
@@ -37,16 +36,6 @@ Check out the live demo of the Favorite Recipes App: [https://recipes-matheusnsi
 
 1. Start the development server: `npm run dev`
 2. Open your web browser and go to: `http://localhost:3000`
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to the project, follow these steps:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/add-new-feature`
-3. Implement your changes and commit: `git commit -m "Add new feature"`
-4. Push to the branch: `git push origin feature/add-new-feature`
-5. Create a pull request explaining your changes.
 
 ## License
 
