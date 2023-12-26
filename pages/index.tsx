@@ -50,10 +50,7 @@ export default function Home() {
         </div>
       </section>
       <section className={classes.recipesFoods}>
-        <Link
-          href="/recipes/pizza"
-          className={classes.pizza}
-        >
+        <Link href="/recipes/pizza" className={classes.pizza}>
           <Image src={pizza} width="200" height="200" alt="" />
           <span>Pizza</span>
         </Link>
@@ -61,10 +58,7 @@ export default function Home() {
           <Image src={burger} width="200" height="200" alt="burger" />
           <span>Burger</span>
         </Link>
-        <Link
-          href="/recipes/salad"
-          className={classes.salad}
-        >
+        <Link href="/recipes/salad" className={classes.salad}>
           <Image src={salad} width="200" height="200" alt="" />
           <span>Salad</span>
         </Link>
@@ -76,7 +70,7 @@ export default function Home() {
           <Image src={taco} width="200" height="200" alt="" />
           <span>Taco</span>
         </Link>
-        <Link href="/recipes/pasta" >
+        <Link href="/recipes/pasta">
           <Image src={pasta} width="200" height="200" alt="" />
           <span>Pasta</span>
         </Link>
@@ -105,8 +99,13 @@ export default function Home() {
                         : elem["image_url"]
                     }
                   />
-                  <h4>{elem.title}</h4>
                   <h5>{elem.publisher}</h5>
+                  <span
+                    className={`material-symbols-outlined star ${classes.star}`}
+                  >
+                    kid_star
+                  </span>
+                  <h4>{elem.title}</h4>
                 </Link>
               );
             })

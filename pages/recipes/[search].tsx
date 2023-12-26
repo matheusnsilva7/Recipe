@@ -31,7 +31,7 @@ const Recipes = () => {
     if (error) setError(false);
     if (recipes.length !== 0) setRecipes([]);
     if (!isLoading) setIsLoading(true);
-    setPage(1)
+    setPage(1);
   }, [router.asPath]);
 
   const fetchRecipesHandler = useCallback(
@@ -67,7 +67,7 @@ const Recipes = () => {
       <div className={classes.recipeContainer}>
         {isLoading && <LoadingIndicator />}
         {!error ? (
-          recipes.slice((page - 1) * 6, page * 6).map((elem: any) => {
+          recipes.slice((page - 1) * 8, page * 8).map((elem: any) => {
             return (
               <Link
                 href={`/recipe/${elem.id}`}
@@ -88,8 +88,13 @@ const Recipes = () => {
                   }
                   alt={elem.title}
                 />
-                <h4>{elem.title}</h4>
                 <h5>{elem.publisher}</h5>
+                <span
+                  className={`material-symbols-outlined star ${classes.star}`}
+                >
+                  kid_star
+                </span>
+                <h4>{elem.title}</h4>
               </Link>
             );
           })
@@ -111,7 +116,7 @@ const Recipes = () => {
                 previous page
               </div>
             )}
-            {Math.floor(recipes.length / 6) >= page && (
+            {Math.floor(recipes.length / 8) >= page && (
               <div
                 className={classes.next}
                 onClick={() => {

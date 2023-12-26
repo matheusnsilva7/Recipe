@@ -77,62 +77,70 @@ const Recipe = () => {
       </Head>
       {isLoading && <LoadingIndicator />}
       {!isLoading && !error && (
-        <div className={classes.containerInfo} id={recipes.id}>
-          <img
-            src={
-              recipes["image_url"]?.slice(0, 5) !== "https"
-                ? recipes["image_url"]?.replace("http", "https")
-                : recipes["image_url"]
-            }
-            className={classes.img}
-            alt={recipes.title}
-          />
-          <div className={classes.title}>
-            <h3>{recipes.title}</h3>
-          </div>
-          <div className={classes.containerInformation}>
-            <h4>
-              {recipes["cooking_time"]}
-              <span>MINUTES</span>
-            </h4>
-            <h4>
-              {recipes["servings"]}
-              <span>SERVINGS</span>
-            </h4>
-          </div>
-          <div className={classes.container}>
-            <h3>Ingredients</h3>
-            <div className={classes.ingredientsContainer}>
-              {recipes.ingredients?.map((elem, i) => {
-                return (
-                  <div key={i}>
-                    <h4>
-                      {elem.quantity && elem.quantity} {elem.unit && elem.unit}{" "}
-                      {elem.description}
-                    </h4>
-                  </div>
-                );
-              })}
+        <div>
+          {!favorite.some((a) => a?.id === recipes.id) ? (
+            <span
+              onClick={FavoriteHandler}
+              className={`material-symbols-outlined star ${classes.star}`}
+            >
+              kid_star
+            </span>
+          ) : (
+            <span
+              onClick={RemovefavoriteHandler}
+              className={`material-symbols-outlined star ${classes.star}  ${classes.favorite}`}
+            >
+              kid_star
+            </span>
+          )}
+          <div className={classes.containerInfo} id={recipes.id}>
+            <img
+              src={
+                recipes["image_url"]?.slice(0, 5) !== "https"
+                  ? recipes["image_url"]?.replace("http", "https")
+                  : recipes["image_url"]
+              }
+              className={classes.img}
+              alt={recipes.title}
+            />
+            <div className={classes.title}>
+              <h3>{recipes.title}</h3>
             </div>
-          </div>
-          <div className={classes.container + " " + classes.gridArea}>
-            <h3>HOW TO COOK IT</h3>
-            <p>
-              This recipe was carefully designed and tested by{" "}
-              {recipes.publisher}. Please check out directions at their website.
-            </p>
-            <div>
-              <a href={recipes.source_url}>Direction</a>
-              {!favorite.some((a) => a?.id === recipes.id) ? (
-                <button onClick={FavoriteHandler}>Add to my favorites</button>
-              ) : (
-                <button
-                  className={classes.remove}
-                  onClick={RemovefavoriteHandler}
-                >
-                  Remove from my favorite
-                </button>
-              )}
+            <div className={classes.containerInformation}>
+              <h4>
+                {recipes["cooking_time"]}
+                <span>MINUTES</span>
+              </h4>
+              <h4>
+                {recipes["servings"]}
+                <span>SERVINGS</span>
+              </h4>
+            </div>
+            <div className={classes.container}>
+              <h3>Ingredients</h3>
+              <div className={classes.ingredientsContainer}>
+                {recipes.ingredients?.map((elem, i) => {
+                  return (
+                    <div key={i}>
+                      <h4>
+                        {elem.quantity && elem.quantity}{" "}
+                        {elem.unit && elem.unit} {elem.description}
+                      </h4>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className={classes.container + " " + classes.gridArea}>
+              <h3>HOW TO COOK IT</h3>
+              <p>
+                This recipe was carefully designed and tested by{" "}
+                {recipes.publisher}. Please check out directions at their
+                website.
+              </p>
+              <div>
+                <a href={recipes.source_url}>Direction</a>
+              </div>
             </div>
           </div>
         </div>
